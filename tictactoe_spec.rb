@@ -3,6 +3,6 @@ require 'minitest/spec'
 
 require_relative 'tictactoe'
 
-describe TicTacToeGame do
+describe TicTacToe do
   if ""
 end
