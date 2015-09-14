@@ -4,6 +4,7 @@ class TicTacToe
 
     @player_1_choice = 0
     @player_2_choice = 0
+    @count = 0
 
     @winning_row = [
       [1,2,3],
@@ -31,6 +32,13 @@ class TicTacToe
     multi_player_mode
   end
 
+  def play
+    game_board
+    # loop do
+    #   # loop through game here
+    # end
+  end
+
   # def single_player_mode
   # end
 
@@ -44,6 +52,7 @@ class TicTacToe
     name = gets.chomp
     player_2 = Player.new(name)
     puts "#{player_2.name} will be O."
+    play
   end
 end
 
