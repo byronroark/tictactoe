@@ -1,3 +1,5 @@
+require_relative 'player'
+
 class TicTacToe
   def initialize
     @spaces = [1,2,3,4,5,6,7,8,9]
@@ -51,6 +53,12 @@ class TicTacToe
     if @winning_rows.any? { |winning_row| winning_rows.all? { } }
   end
 
+  def player_wins(x_or_o)
+    if @spaces[0] == "X" && @spaces[1] == "X" && @spaces[2] == "X"
+      return true
+    end
+  end
+
   # def single_player_mode
   # end
 
@@ -58,12 +66,12 @@ class TicTacToe
     puts "Player 1, enter your name:"
     name = gets.chomp
     player_1 = Player.new(name)
-    puts "#{player_1.name} will be X."
+    puts "#{player_1.name.upcase} will be X."
     puts "---"
     puts "Player 2, enter your name:"
     name = gets.chomp
     player_2 = Player.new(name)
-    puts "#{player_2.name} will be O."
+    puts "#{player_2.name.upcase} will be O."
     play
   end
 end
