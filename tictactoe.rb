@@ -49,9 +49,9 @@ class TicTacToe
     winner_chicken_dinner
   end
 
-  def winner_chicken_dinner
-    if @winning_rows.any? { |winning_row| winning_rows.all? { } }
-  end
+  # def winner_chicken_dinner
+  #   if @winning_rows.any? { |winning_row| winning_rows.all? { } }
+  # end
 
   def player_wins(x_or_o)
     if @spaces[0] == "X" && @spaces[1] == "X" && @spaces[2] == "X"
