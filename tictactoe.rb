@@ -28,15 +28,27 @@ class TicTacToe
     }
   end
 
+  def valid_move?(position)
+    @spaces[position-1] != "o" && @spaces[position-1] != "x"
+  end
+
+  # define player method
+  # count += 1
+
   def start_game
     multi_player_mode
   end
 
   def play
-    game_board
-    # loop do
-    #   # loop through game here
-    # end
+    multi_player_mode
+    while @count < 9
+      game_board
+    end
+    winner_chicken_dinner
+  end
+
+  def winner_chicken_dinner
+    if @winning_rows.any? { |winning_row| winning_rows.all? { } }
   end
 
   # def single_player_mode
